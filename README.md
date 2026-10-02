@@ -28,4 +28,42 @@ flowchart TD
 
 ```
 
+### Diagrama de Classe
 
+```mermaid
+classDiagram
+    class Veterinário  {
+        %%atrbutos: caracteristicas que serão
+        %% armazenadas no sistema
+        -CPF: string
+        %% métodos: ações que serão desempenhadas
+        %% por essa entidade no sistema
+        +darCPF() string
+        +atenderAnimal(animal: Animal) void
+    }
+    Veterinário -- Animal
+    Animal -- Cliente
+    class Animal {
+        - dono: Cliente
+        - nome: string
+        - raça: string
+        - peso: float
+        - cor: string
+        - sexo: string
+
+    }
+
+    class Cliente {
+        -nome: string
+        -cpf: string
+        -email: string
+
+    }
+
+
+    
+
+    
+
+    
+```
